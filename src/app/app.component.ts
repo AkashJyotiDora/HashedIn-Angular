@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CourceComponent } from './cource/cource.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Demo-Angular';
+
+  ngOnInit(): void {
+  }
 }
