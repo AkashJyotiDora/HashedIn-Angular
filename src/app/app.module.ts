@@ -10,6 +10,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { CartComponent } from './cart/cart.component';
 import { ListComponent } from './list/list.component';
+// import { routes } from '../app/commons/app.route';
+// import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ListComponent } from './list/list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // RouterModule.forRoot(routes, {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
