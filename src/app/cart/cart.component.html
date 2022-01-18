@@ -1,1 +1,30 @@
-<p>cart works!</p>
+<h4>My Cart</h4>
+<ng-container  *ngFor="let crc of counter" class="container mt-5 mb-5">
+  <div class="container mt-5 mb-5" *ngIf="crc.addedToCart == true">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10">
+            <div class="row p-2 bg-white border rounded">
+                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://i.imgur.com/QpjAiHq.jpg"></div>
+                <div class="col-md-6 mt-1">
+                    <h5>{{crc.name}}</h5>
+                    <div class="d-flex flex-row">
+                        <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                    </div>
+                    <div class="mt-1 mb-1 spec-1"><span>Author : {{crc.author}}</span></div>
+                    <button class="btn btn-outline-primary btn-sm mt-2" type="button">Details</button><br>
+                </div>
+                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                    <div class="d-flex flex-row align-items-center">
+                        <h4 class="mr-1">Rs. {{crc.actualPrice}}/-</h4>
+                    </div>
+                    <h6 class="text-success">Promotional price</h6>
+                    <div class="d-flex flex-column mt-4">
+                      <button (click)="removeFromCart(crc)" class="btn btn-primary"><i class="fa fa-trash d-flex flex-column mt-12"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</ng-container>
+<h2>Total amount = {{total}}</h2>
